@@ -2,9 +2,10 @@
   "name": "cesar-translator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d lib",
+    "test": "mocha test --compilers js:babel-register --recursive"
   },
   "repository": {
     "type": "git",
@@ -15,11 +16,14 @@
   "bugs": {
     "url": "https://github.com/jelin86/cesar-translator/issues"
   },
+  "homepage": "https://github.com/jelin86/cesar-translator",
   "devDependencies": {
     "babel-preset-es2015": "^6.22.0",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "ramda": "^0.23.0"
   },
-  "homepage": "https://github.com/jelin86/cesar-translator#readme"
+  "dependencies": {
+    "express": "^4.14.1"
+  }
 }
